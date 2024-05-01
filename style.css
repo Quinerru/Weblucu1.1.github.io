@@ -1,0 +1,45 @@
+ body {
+  cursor: url('telunjuk.png'), auto; /* Menggunakan gambar sebagai kursor */
+  
+  
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .animation {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+  }
+  
+  h1 {
+    position: relative;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: #458855;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .no {
+    background-color: #dc3545;
+  }

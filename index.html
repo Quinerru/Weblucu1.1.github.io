@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Request</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* CSS untuk background tombol dan efek kedip */
+    .button.yes:hover {
+      animation: blink-green 1s infinite;
+    }
+    .button.no:hover {
+      animation: blink-red 1s infinite;
+    }
+    @keyframes blink-green {
+      0% { background-color: #28a745; }
+      50% { background-color: #007b33; }
+      100% { background-color: #28a745; }
+    }
+    @keyframes blink-red {
+      0% { background-color: #dc3545; }
+      50% { background-color: #9a0007; }
+      100% { background-color: #dc3545; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background" style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #ffffff;">
+    <div class="content" style="text-align: center;">
+      <div style="position: relative;">
+        <div class="tenor-gif-embed" data-postid="25544554" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/love-gif-25544554">Love GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <div class="animation" style="position: absolute; top: -50%; left: 50%; transform: translateX(-50%); width: 50px; height: 50px;">
+          <div class="tenor-gif-embed" data-postid="25544554" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/love-gif-25544554">Love GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+      </div>
+      <h1>Can you give me money?</h1>
+      <div class="buttons" style="margin-top: 20px;">
+        <a href="yes.html" class="button yes" style="background-color: #28a745; color: #ffffff;">Yes</a>
+        <button class="button no" style="background-color: #dc3545; color: #ffffff;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Element audio untuk memainkan musik -->
+  <audio autoplay loop>
+    <source src="Cats (Sped Up).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const noButton = document.querySelector('.button.no');
+    const yesButton = document.querySelector('.button.yes');
+
+    let clickCount = 0;
+    
+    noButton.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount === 1) {
+        noButton.textContent = 'Pleaseee';
+        noButton.style.backgroundColor = '#ffcccc'; // Mengubah warna latar belakang menjadi merah muda
+        yesButton.style.fontSize = '30px'; // Mengubah ukuran font tombol Yes
+      } else if (clickCount === 2) {
+        noButton.textContent = 'Boleeh yaaa';
+        noButton.style.backgroundColor = '#ff9999'; // Mengubah warna latar belakang menjadi merah tua
+        yesButton.style.fontSize = '60px'; // Mengubah ukuran font tombol Yes
+        clickCount = 0; // Mengatur ulang hitungan klik untuk siklus selanjutnya
+      }
+    });
+  </script>
+</body>
+</html>
